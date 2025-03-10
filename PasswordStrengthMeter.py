@@ -7,7 +7,7 @@ st.set_page_config(page_title="Password Checker App Develop By Usama Muzammil", 
 st.markdown("""
     <style>
         body {
-            background-color: #0000ff; /* Blue Background */
+            background-color: black */
             color: #ffffff; /* White Text */
             font-family: Arial, sans-serif;
         }
