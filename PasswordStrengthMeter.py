@@ -17,7 +17,18 @@ st.markdown("""
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
         }
-        .stTextInput, .stButton > button {
+        .stTextInput label {
+            color: white !important; /* White color for label */
+            font-size: 16px;
+        }
+        .stTextInput input {
+            background-color: #282c34;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+        }
+        .stButton > button {
             background-color: #282c34;
             color: white;
             border-radius: 5px;
@@ -76,7 +87,8 @@ def check_password_strength(password):
     return remarks
 
 st.title("🔒 Password Strength Checker By Usama Muzammil")
-password = st.text_input("Enter your password:", type="password")
+st.markdown('<label style="color: white; font-size: 16px;">Enter your password:</label>', unsafe_allow_html=True)
+password = st.text_input("", type="password")
 
 if password:
     strength_result = check_password_strength(password)
